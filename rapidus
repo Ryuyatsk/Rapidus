@@ -62,7 +62,7 @@ class Component
     {
         $this->componentName = ucfirst($fileName) . 'Component';
         $fileName = ucfirst($fileName) . 'Component.js';
-        $this->componentFile = __DIR__ . "/../Component/{$fileName}";
+        $this->componentFile = __DIR__ . "/Component/{$fileName}";
     }
 
     public function make()
@@ -86,7 +86,7 @@ class View
     {
         $this->viewName = ucfirst($fileName) . 'View';
         $fileName = ucfirst($fileName) . 'View.js';
-        $this->viewFile = __DIR__ . "/../Views/{$fileName}";
+        $this->viewFile = __DIR__ . "/Views/{$fileName}";
     }
 
     public function make()
@@ -111,11 +111,11 @@ class SetUp
 
     public function __construct()
     {
-        $this->component = __DIR__ . '/../Component';
-        $this->di = __DIR__ . '/../Di';
-        $this->repository = __DIR__ . '/../Repository';
-        $this->view = __DIR__ . '/../Views';
-        $this->routing = __DIR__ . '/../Routing.js';
+        $this->component = __DIR__ . '/Component';
+        $this->di = __DIR__ . '/Di';
+        $this->repository = __DIR__ . '/Repository';
+        $this->view = __DIR__ . '/Views';
+        $this->routing = __DIR__ . '/Routing.js';
     }
 
     public function index()
@@ -166,7 +166,7 @@ class Repository
     {
         $this->repositoryName = ucfirst($fileName) . 'Repository';
         $fileName = ucfirst($fileName) . 'Repository.js';
-        $this->repositoryFile = __DIR__ . "/../Repository/{$fileName}";
+        $this->repositoryFile = __DIR__ . "/Repository/{$fileName}";
     }
 
     public function make()
@@ -190,7 +190,7 @@ class Di
     {
         $this->diName = ucfirst($fileName) . 'Repository';
         $fileName = ucfirst($fileName) . 'Repository.js';
-        $this->diFile = __DIR__ . "/../Repository/{$fileName}";
+        $this->diFile = __DIR__ . "/Repository/{$fileName}";
     }
 
     public function make()
