@@ -13,7 +13,7 @@
 ReactNativeApp のプロジェクトを生成した時に初期のディレクトリ構成などを自動的に作成する。
 
 ```
-$ rapidus setUp
+$ php rapidus setUp
 ```
 
 ### makeについて
@@ -21,9 +21,9 @@ makeは自動的にファイルの雛形を作成する。
 以下のコマンドが存在する。
 
 ```
-$ rapidus make:Component [コンポーネント名]
-$ rapidus make:Repository [リポジトリ名]
-$ rapidus make:View [ビュー名]
-$ rapidus make:Di [diコンテナ名] (未実装)
+$ php rapidus make:Component [コンポーネント名]
+$ php rapidus make:Repository [リポジトリ名]
+$ php rapidus make:View [ビュー名]
+$ php rapidus make:Di [diコンテナ名] (未実装)
 ```
 
