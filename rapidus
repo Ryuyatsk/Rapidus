@@ -29,7 +29,7 @@ class Artisan
         }
     }
 
-    public function make(string $part, string $fileName)
+    public function make($part, $fileName)
     {
         switch ($part) {
             case 'Component':
@@ -58,7 +58,7 @@ class Component
     private $componentFile;
     private $componentName;
 
-    public function __construct(string $fileName)
+    public function __construct($fileName)
     {
         $this->componentName = ucfirst($fileName) . 'Component';
         $fileName = ucfirst($fileName) . 'Component.js';
@@ -82,7 +82,7 @@ class View
     private $viewFile;
     private $viewName;
 
-    public function __construct(string $fileName)
+    public function __construct($fileName)
     {
         $this->viewName = ucfirst($fileName) . 'View';
         $fileName = ucfirst($fileName) . 'View.js';
@@ -162,7 +162,7 @@ class Repository
     private $repositoryFile;
     private $repositoryName;
 
-    public function __construct(string $fileName)
+    public function __construct($fileName)
     {
         $this->repositoryName = ucfirst($fileName) . 'Repository';
         $fileName = ucfirst($fileName) . 'Repository.js';
@@ -186,7 +186,7 @@ class Di
     private $diFile;
     private $diName;
 
-    public function __construct(string $fileName)
+    public function __construct($fileName)
     {
         $this->diName = ucfirst($fileName) . 'Repository';
         $fileName = ucfirst($fileName) . 'Repository.js';
@@ -222,7 +222,7 @@ class Heredoc
         return $routingFile;
     }
 
-    public function getComponent(string $componentName)
+    public function getComponent($componentName)
     {
         $componentFile = <<< EOF
 import React from 'react';
@@ -260,7 +260,7 @@ EOF;
         return $componentFile;
     }
 
-    public function getRepository(string $repositoryName)
+    public function getRepository($repositoryName)
     {
         $repositoryFile = <<< EOF
 import axios from 'axios';
@@ -284,7 +284,7 @@ EOF;
         return $repositoryFile;
     }
 
-    public function getView(string $viewName)
+    public function getView($viewName)
     {
         $componentFile = <<< EOF
 import React from 'react';
