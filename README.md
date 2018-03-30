@@ -1,6 +1,6 @@
 # Rapidusについて
 サーバサイドのフレームワークにはジェネレータが存在する
-  - Railsにはrake
+  - Railsにはgenerate
   - Laravelにはartisan
 
 しかし、ReactNativeには存在しない。
