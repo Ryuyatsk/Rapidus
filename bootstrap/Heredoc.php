@@ -80,7 +80,7 @@ export default class {$repositoryName} {
         axios.get('')
             .then(function (response) {
                 let res = new Object(response['data']);
-                this.setState({"res": res});
+                this.this.setState({"res": res});
             }.bind(this));
     }
 }
