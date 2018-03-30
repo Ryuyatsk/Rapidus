@@ -27,3 +27,5 @@ $ php rapidus make:View [ビュー名]
 $ php rapidus make:Di [diコンテナ名] (未実装)
 ```
 
+## LICENSE
+MIT.
