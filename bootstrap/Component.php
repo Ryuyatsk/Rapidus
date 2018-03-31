@@ -15,7 +15,7 @@ class Component
     {
         $this->componentName = ucfirst($fileName) . 'Component';
         $fileName = ucfirst($fileName) . 'Component.js';
-        $this->componentFile = __DIR__ . "/../Component/{$fileName}";
+        $this->componentFile = __DIR__ . "/../App/Component/{$fileName}";
     }
 
     public function make()

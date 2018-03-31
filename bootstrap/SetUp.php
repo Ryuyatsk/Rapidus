@@ -8,21 +8,31 @@
 
 class SetUp
 {
+    private $app;
     private $component;
     private $di;
     private $repository;
     private $view;
     private $routing;
 
+    /**
+     * SetUp constructor.
+     * それぞれのディレクトリやファイルを作成するPATHを指定する
+     */
     public function __construct()
     {
-        $this->component = __DIR__ . '/../Component';
-        $this->di = __DIR__ . '/../Di';
-        $this->repository = __DIR__ . '/../Repository';
-        $this->view = __DIR__ . '/../Views';
-        $this->routing = __DIR__ . '/../Routing.js';
+        $this->app = __DIR__ . '/../App';
+        $this->component = __DIR__ . '/../App/Component';
+        $this->di = __DIR__ . '/../App/Di';
+        $this->repository = __DIR__ . '/../App/Repository';
+        $this->view = __DIR__ . '/../App/Views';
+        $this->routing = __DIR__ . '/../App/Routing.js';
     }
 
+    /**
+     * もし、SetUpコマンドが実行されたら、
+     * このメソッドが実行される
+     */
     public function index()
     {
         $this->makeDir();
@@ -30,8 +40,15 @@ class SetUp
         (new View('Home'))->make();
     }
 
+    /**
+     * このメソッドはSetUp時のAppディレクトリ内のディレクトリ構成を作る
+     */
     public function makeDir()
     {
+        if (!mkdir($this->app, 0777, true)) {
+            print("正常に実行できなかったため、処理を中断します。\n");
+            exit;
+        }
         if (!mkdir($this->component, 0777, true)) {
             print("正常に実行できなかったため、処理を中断します。\n");
             exit;
@@ -50,6 +67,9 @@ class SetUp
         }
     }
 
+    /**
+     * ルーティングファイルを生成するメソッド
+     */
     public function makeRouting()
     {
         if (!touch($this->routing)) {
