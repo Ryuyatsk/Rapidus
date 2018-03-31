@@ -21,12 +21,13 @@ class SetUp
      */
     public function __construct()
     {
-        $this->app = __DIR__ . '/../App';
-        $this->component = __DIR__ . '/../App/Component';
-        $this->di = __DIR__ . '/../App/Di';
-        $this->repository = __DIR__ . '/../App/Repository';
-        $this->view = __DIR__ . '/../App/Views';
-        $this->routing = __DIR__ . '/../App/Routing.js';
+        global $basePath;
+        $this->app = $basePath . '/App';
+        $this->component = $basePath . '/App/Component';
+        $this->di = $basePath . '/App/Di';
+        $this->repository = $basePath . '/App/Repository';
+        $this->view = $basePath . '/App/Views';
+        $this->routing = $basePath . '/App/Routing.js';
     }
 
     /**

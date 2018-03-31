@@ -13,9 +13,10 @@ class Repository
 
     public function __construct(string $fileName)
     {
+        global $basePath;
         $this->repositoryName = ucfirst($fileName) . 'Repository';
         $fileName = ucfirst($fileName) . 'Repository.js';
-        $this->repositoryFile = __DIR__ . "/../App/Repository/{$fileName}";
+        $this->repositoryFile = $basePath . "/App/Repository/{$fileName}";
     }
 
     public function make()

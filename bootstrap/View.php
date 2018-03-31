@@ -13,9 +13,10 @@ class View
 
     public function __construct(string $fileName)
     {
+        global $basePath;
         $this->viewName = ucfirst($fileName) . 'View';
         $fileName = ucfirst($fileName) . 'View.js';
-        $this->viewFile = __DIR__ . "/../App/Views/{$fileName}";
+        $this->viewFile = $basePath . "/App/Views/{$fileName}";
     }
 
     public function make()

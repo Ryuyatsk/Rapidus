@@ -15,6 +15,8 @@ require_once(__DIR__ . '/bootstrap/Heredoc.php');
 require_once(__DIR__ . '/bootstrap/Repository.php');
 require_once(__DIR__ . '/bootstrap/Di.php');
 
+$basePath = __DIR__;
+
 if ($argc < 2) {
     print("引数が足りません\n");
     exit;
@@ -24,7 +26,7 @@ if ($argc < 2) {
 
 $app = <<< EOF
 import React from 'react';
-import {RootStack} from './Routing';
+import {RootStack} from './App/Routing';
 
 export default class App extends React.Component {
     render() {

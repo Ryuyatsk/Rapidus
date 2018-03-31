@@ -13,9 +13,10 @@ class Component
 
     public function __construct(string $fileName)
     {
+        global $basePath;
         $this->componentName = ucfirst($fileName) . 'Component';
         $fileName = ucfirst($fileName) . 'Component.js';
-        $this->componentFile = __DIR__ . "/../App/Component/{$fileName}";
+        $this->componentFile = $basePath . "/App/Component/{$fileName}";
     }
 
     public function make()

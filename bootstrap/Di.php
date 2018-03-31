@@ -13,9 +13,10 @@ class Di
 
     public function __construct(string $fileName)
     {
+        global $basePath;
         $this->diName = ucfirst($fileName) . 'Repository';
         $fileName = ucfirst($fileName) . 'Repository.js';
-        $this->diFile = __DIR__ . "/../App/Repository/{$fileName}";
+        $this->diFile = $basePath . "/App/Repository/{$fileName}";
     }
 
     public function make()
