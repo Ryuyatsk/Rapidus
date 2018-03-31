@@ -7,7 +7,7 @@
  * Time: 23:13
  */
 
-require_once (__DIR__ . '/bootstrap/Artisan.php');
+require_once(__DIR__ . '/bootstrap/Rapidus.php');
 require_once(__DIR__ . '/bootstrap/Component.php');
 require_once(__DIR__ . '/bootstrap/View.php');
 require_once(__DIR__ . '/bootstrap/SetUp.php');
@@ -20,7 +20,7 @@ if ($argc < 2) {
     exit;
 }
 
-(new Artisan())->index();
+(new Rapidus())->index();
 
 $app = <<< EOF
 import React from 'react';

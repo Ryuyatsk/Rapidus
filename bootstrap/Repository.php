@@ -15,7 +15,7 @@ class Repository
     {
         $this->repositoryName = ucfirst($fileName) . 'Repository';
         $fileName = ucfirst($fileName) . 'Repository.js';
-        $this->repositoryFile = __DIR__ . "/../Repository/{$fileName}";
+        $this->repositoryFile = __DIR__ . "/../App/Repository/{$fileName}";
     }
 
     public function make()

@@ -15,7 +15,7 @@ class View
     {
         $this->viewName = ucfirst($fileName) . 'View';
         $fileName = ucfirst($fileName) . 'View.js';
-        $this->viewFile = __DIR__ . "/../Views/{$fileName}";
+        $this->viewFile = __DIR__ . "/../App/Views/{$fileName}";
     }
 
     public function make()

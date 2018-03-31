@@ -15,7 +15,7 @@ class Di
     {
         $this->diName = ucfirst($fileName) . 'Repository';
         $fileName = ucfirst($fileName) . 'Repository.js';
-        $this->diFile = __DIR__ . "/../Repository/{$fileName}";
+        $this->diFile = __DIR__ . "/../App/Repository/{$fileName}";
     }
 
     public function make()

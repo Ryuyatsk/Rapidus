@@ -6,7 +6,7 @@
  * Time: 23:51
  */
 
-class Artisan
+class Rapidus
 {
     public function index()
     {
